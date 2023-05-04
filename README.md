@@ -12,8 +12,6 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
-  - [🚀 Live Demo](#-live-demo)
-  - [Video Presentation](#video-presentation)
 - [💻 Getting Started ](#-getting-started-)
   - [Prerequisites](#prerequisites)
   - [Setup](#setup)
@@ -57,16 +55,6 @@
 - **Tracking progress**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo
-
-[Coming Soon](#readme-top)
-
-## Video Presentation <a name="video-presentation"></a>
-
-N/A
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
