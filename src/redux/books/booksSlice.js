@@ -1,7 +1,26 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  books: [],
+  booksArr: [
+    {
+      item_id: 'item1',
+      title: 'The Great Gatsby',
+      author: 'John Smith',
+      category: 'Fiction',
+    },
+    {
+      item_id: 'item2',
+      title: 'Anna Karenina',
+      author: 'Leo Tolstoy',
+      category: 'Fiction',
+    },
+    {
+      item_id: 'item3',
+      title: 'The Selfish Gene',
+      author: 'Richard Dawkins',
+      category: 'Nonfiction',
+    },
+  ],
 };
 
 export const booksSlice = createSlice({
@@ -9,13 +28,13 @@ export const booksSlice = createSlice({
   initialState,
   reducers: {
     addBook: (state, action) => {
-      state.books.push(action.payload);
+      state.booksArr.push(action.payload);
     },
     removeBook: (state, action) => {
-      const filteredBooks = state.books.filter(
-        ({ id }) => id !== action.payload,
+      const filteredBooks = state.booksArr.filter(
+        ({ item_id }) => item_id !== action.payload,
       );
-      return { ...state, books: filteredBooks };
+      return { ...state, booksArr: filteredBooks };
     },
   },
 });
