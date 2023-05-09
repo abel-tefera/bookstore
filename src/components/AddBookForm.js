@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addBook } from '../redux/books/booksSlice';
+import Button from './Button';
 
 const AddBookForm = () => {
   const dispatch = useDispatch();
@@ -38,7 +39,7 @@ const AddBookForm = () => {
           onChange={(e) => setAuthor(e.target.value)}
           value={author}
         />
-        <button type="submit">Add Book</button>
+        <Button type="submit" title="Add Book" />
       </div>
     </form>
   );
