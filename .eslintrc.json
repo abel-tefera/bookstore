@@ -27,7 +27,8 @@
     "react/no-array-index-key": "off",
     "no-nested-ternary": "off",
     "no-unused-vars": "off",
-    "import/prefer-default-export": "off"
+    "import/prefer-default-export": "off",
+    "camelcase": "off"
   },
   "overrides": [
     {
