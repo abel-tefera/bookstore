@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/books/booksSlice';
+import { addNewBook } from '../redux/books/booksSlice';
 import Button from './Button';
 
 const AddBookForm = () => {
@@ -8,17 +8,28 @@ const AddBookForm = () => {
 
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const submitHandler = (e) => {
     e.preventDefault();
-    dispatch(
-      addBook({
-        item_id: Date.now(),
-        author,
-        title,
-        category: 'Classic',
-      }),
-    );
+    if (title.trim() !== '' && author.trim() !== '') {
+      try {
+        setLoading(true);
+        dispatch(
+          addNewBook({
+            item_id: Date.now(),
+            author: author.trim(),
+            title: title.trim(),
+            category: 'Classic',
+          }),
+        ).unwrap();
+      } catch (e) {
+        console.error('Failed to save the book', e);
+      } finally {
+        setLoading(false);
+      }
+    }
+
     setTitle('');
     setAuthor('');
   };
@@ -39,7 +50,7 @@ const AddBookForm = () => {
           onChange={(e) => setAuthor(e.target.value)}
           value={author}
         />
-        <Button type="submit" title="Add Book" />
+        <Button type="submit" title={loading ? 'Adding Book...' : 'Add Book'} />
       </div>
     </form>
   );
