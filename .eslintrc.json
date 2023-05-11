@@ -28,7 +28,8 @@
     "no-nested-ternary": "off",
     "no-unused-vars": "off",
     "import/prefer-default-export": "off",
-    "camelcase": "off"
+    "camelcase": "off",
+    "no-console": "off"
   },
   "overrides": [
     {
