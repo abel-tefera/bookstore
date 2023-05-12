@@ -10,15 +10,19 @@ import Header from './components/Header';
 function App() {
   return (
     <div className="App">
-      <div className="container">
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Header />}>
-              <Route index element={<Books />} />
-              <Route path="categories" element={<Categories />} />
-            </Route>
-          </Routes>
-        </BrowserRouter>
+      <div className="">
+        <div className="bg-gray-200 p-12">
+          <div className="bg-white container">
+            <BrowserRouter>
+              <Routes>
+                <Route path="/" element={<Header />}>
+                  <Route index element={<Books />} />
+                  <Route path="categories" element={<Categories />} />
+                </Route>
+              </Routes>
+            </BrowserRouter>
+          </div>
+        </div>
       </div>
     </div>
   );
