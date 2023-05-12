@@ -10,7 +10,7 @@ import Header from './components/Header';
 function App() {
   return (
     <div className="App">
-      <div className="font-montserrat">
+      <div className="">
         <div className="bg-gray-200 p-12">
           <div className="bg-white container">
             <BrowserRouter>

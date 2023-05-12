@@ -10,11 +10,11 @@ const Book = ({
 }) => {
   const dispatch = useDispatch();
   return (
-    <div className="flex flex-row justify-between items-center bg-white py-4 pl-8 pr-32">
+    <div className="flex flex-row justify-between items-center bg-white py-4 pl-8 pr-32 font-roboto">
       <div className="flex flex-col my-4">
-        <div className="text-base font-semibold">{category}</div>
+        <div className="text-base font-semibold text-gray-500">{category}</div>
         <div className="text-2xl font-bold">{title}</div>
-        <div className="text-lg font-light">{author}</div>
+        <div className="text-base font-light">{author}</div>
         <div className="flex flex-row items-center py-4">
           <Button type="button" title="Comments" />
           <hr className="px-4 rotate-90" />

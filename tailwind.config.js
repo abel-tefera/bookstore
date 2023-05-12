@@ -7,9 +7,11 @@ module.exports = {
     extend: {
       fontFamily: {
         montserrat: ['Montserrat'],
+        roboto: ['Roboto Slab', 'serif'],
       },
       colors: {
         'custom-blue': '#0290ff',
+        'custom-dark-blue': '#4386bf',
       },
     },
   },

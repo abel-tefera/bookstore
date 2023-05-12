@@ -3,7 +3,7 @@ import { Outlet, Link } from 'react-router-dom';
 
 const Header = () => (
   <>
-    <nav className="flex flex-row py-6 justify-between px-24 items-center border-b-gray-300 border-b">
+    <nav className="flex flex-row py-6 justify-between px-24 items-center border-b-gray-300 border-b font-montserrat">
       <div className="flex flex-row items-center">
         <div className="text-3xl pr-6 text-custom-blue font-bold">Bookstore CMS</div>
         <ul className="flex flex-col md:flex-row">

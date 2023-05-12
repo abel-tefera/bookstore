@@ -6,7 +6,7 @@ const Button = ({
   <button
     onClick={onClick}
     type={type === 'button' ? 'button' : 'submit'}
-    className={filled ? 'bg-custom-blue p-2 text-white' : ''}
+    className={filled ? 'bg-custom-blue p-2 text-white' : 'font-light'}
   >
     {title}
   </button>

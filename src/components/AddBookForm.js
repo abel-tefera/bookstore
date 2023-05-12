@@ -35,8 +35,8 @@ const AddBookForm = () => {
   };
 
   return (
-    <form onSubmit={submitHandler} className="flex flex-col mb-6">
-      <div className="text-2xl font-extrabold mb-2 uppercase text-gray-500">
+    <form onSubmit={submitHandler} className="flex flex-col mb-6 font-montserrat">
+      <div className="text-2xl font-bold mb-2 uppercase text-gray-500">
         Add New Book
       </div>
       <div className="flex flex-row w-full">
@@ -49,13 +49,13 @@ const AddBookForm = () => {
         />
         <input
           type="text"
-          className="p-3 mr-4 w-1/4"
+          className="p-3 mr-4 w-1/3"
           placeholder="Author"
           onChange={(e) => setAuthor(e.target.value)}
           value={author}
         />
         <Button
-          className="p-3 w-1/4"
+          className="p-3"
           type="submit"
           title={loading ? 'Adding Book...' : 'Add Book'}
           filled
