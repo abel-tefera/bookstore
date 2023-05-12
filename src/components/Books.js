@@ -24,19 +24,21 @@ const Books = () => {
   }, [status, dispatch]);
 
   return status === 'succeeded' ? (
-    <div className="container px-1 md:px-12 flex flex-col">
+    <div className="container px-1 md:px-12 flex flex-col py-4 bg-gray-100">
       {books.map(({
         item_id, title, category, author,
       }, i) => (
-        <Book
-          key={i}
-          item_id={item_id}
-          title={title}
-          category={category}
-          author={author}
-        />
+        <div key={i} className="my-2 border border-gray-300">
+          <Book
+            item_id={item_id}
+            title={title}
+            category={category}
+            author={author}
+          />
+        </div>
       ))}
 
+      <hr className="w-full px-4 my-6" />
       <AddBookForm />
     </div>
   ) : status === 'failed' ? (
